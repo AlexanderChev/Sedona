@@ -1,0 +1,62 @@
+// html {
+// 	box-sizing: border-box;
+// 	height: 100%;
+// 	font-size: 14px;
+
+// 	@include desktop {
+// 		font-size: 16px;
+// 	}
+// }
+
+// *, *:before, *:after {
+// 	box-sizing: inherit;
+// }
+
+// body {
+// 	position: relative;
+// 	min-width: 320px;
+// 	height: 100%;
+// 	margin: 0;
+// 	padding: 0;
+// 	font-family: $r-r, "Arial", sans-serif;
+// }
+
+// .wrapper {
+// 	position: relative;
+// 	display: table;
+// 	width: 100%;
+// 	height: 100%;
+// 	overflow: hidden;
+// }
+
+// .content {
+// 	display: table-row;
+// 	height: 100%;
+// }
+
+// img {
+// 	max-width: 100%;
+// 	max-height: 100%;
+// 	line-height: 0;
+// }
+
+// a {
+// 	text-decoration: none;
+// 	color: $color-link;
+// }
+
+// ul {
+// 	margin: 0;
+// 	padding: 0;
+// 	list-style: none;
+// }
+
+// .container {
+// 	@include container;
+// 	@extend %clearfix;
+// }
+
+// input[type="submit"],
+// input[type="reset"] {
+// 	outline: none;
+// }

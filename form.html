@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+	<script src="js/local-svg.js"></script>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Седона | Фото</title>
+</head>
+<body>
+	<!--[if lt IE 9]>
+        <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+	<div class="wrapper">
+		<header class="page-header">
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+					<li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фото и видео</a></li>
+				</ul>
+				<ul class="main-nav__list">
+					<li class="main-nav__item"><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
+					<li class="main-nav__item"><a href="https://htmlacademy.ru" class="main-nav__link">Html Academy</a></li>
+				</ul>
+			</nav>
+			<a href="index.html" class="page-header__logo">Седона</a>
+			<a href="#" class="page-header__toggle-close">Закрыть</a>
+			<a href="#" class="page-header__toggle-open">Меню</a>
+			<div class="page-header__intro">
+				<h1 class="visible-hidden">Добро пожаловать в Седону</h1>
+				<svg></svg>
+			</div>
+		</header> <!-- .page-header -->
+
+		<main class="content">
+			<div class="title title--bold">
+				<h2>Оставьте свой отзыв</h2>
+				<p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+			</div>
+			<form action="#" method="POST" class="form">
+				<div class="form__group">
+					<h3 class="form__group-title">Представтесь, пожалуйста:</h3>
+					<p class="form__input-wrap">
+						<label for="form__input" class="form__label">Имя:</label>
+						<input type="text" name="useName" placeholder="Петр">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input" class="form__label">Фамилия:</label>
+						<input type="text" name="userLastName" placeholder="Петров">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input" class="form__label">Отчество:</label>
+						<input type="text" name="userMiddleName" placeholder="Петрович">
+					</p>
+				</div>
+				<div class="form__group">
+					<h3 class="form__group-title">Ваше Общее впечатление:</h3>
+					<p class="form__input-wrap">
+						<label for="form__input-radio" class="form__label">Скорее положительное</label>
+						<input type="radio" name="positive" class="form__input-radio">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input-radio" class="form__label">Скорее отрицательное</label>
+						<input type="radio" name="negative" class="form__input-radio">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input-radio" class="form__label">Затрудняюсь ответить</label>
+						<input type="radio" name="unknown" class="form__input-radio">
+					</p>
+				</div>
+				<div class="form__group">
+					<h3 class="form__group-title">Контактная информация:</h3>
+					<p class="form__input-wrap">
+						<label for="form__input-contact" class="form__label">Телефон:</label>
+						<input type="tel" name="tel" class="form__input-contact" placeholder="Введите номер">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input" class="form__label">Электронная почта:</label>
+						<input type="tel" name="email" class="form__input-contact" placeholder="Введите e-mail">
+					</p>
+				</div>
+				<div class="form__group">
+					<h3 class="form__group-title">Посещенные достопримечательности:</h3>
+					<p class="form__input-wrap">
+						<label for="form__input-checkbox" class="form__label">Мост Дьявола</label>
+						<input type="checkbox" name="devilBridge" class="form__input-checkbox">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input-checkbox" class="form__label">Гора-Колокол</label>
+						<input type="checkbox" name="mountBell" class="form__input-checkbox">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input-checkbox" class="form__label">Слайд-парк</label>
+						<input type="checkbox" name="slidePark" class="form__input-checkbox">
+					</p>
+					<p class="form__input-wrap">
+						<label for="form__input-checkbox" class="form__label">Красные скалы</label>
+						<input type="checkbox" name="redRocks" class="form__input-checkbox">
+					</p>
+				</div>
+				<div class="form__group">
+					<h3 class="form__group-title">Опишите свои эмоции:</h3>
+					<textarea class="form__textarea" rows="10" placeholder="Опишите подробно все свои восторги">
+					</textarea>
+				</div>
+				<input type="submit" class="form__submit" value="Отправить отзыв">
+			</form>
+
+		</main>
+
+		<footer class="page-footer">
+			<p class="page-footer__text">#visitsedona</p>
+			<p class="socials">
+				<a href="#" class="socials">Twitter</a>
+				<a href="#" class="socials">Facebook</a>
+				<a href="#" class="socials">Youtube</a>
+			</p>
+			<p class="page-footer__copyright">Разработано <a href="#">Html Academy</a></p>
+		</footer>  <!-- </footer> -->
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

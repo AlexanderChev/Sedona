@@ -1,0 +1,103 @@
+// @mixin desktop {
+// 	@media (min-width: 768px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin tablet {
+// 	@media (max-width: 768px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin mobile {
+// 	@media (max-width: 480px) {
+// 		@content;
+// 	}
+// }
+
+// @mixin container {
+// 	width: 95%;
+// 	margin: 0 auto;
+
+// 	@include mobile {
+// 		width: 93%;
+// 	}
+
+// 	@include  tablet {
+// 		width: 94%;
+// 	}
+// }
+
+// %clearfix {
+// 	&:after, &:before {
+// 		content: "";
+// 		display: table;
+// 	}
+
+// 	&:after {
+// 		clear: both;
+// 	}
+// }
+
+// @mixin clearfix {
+// 	&:after {
+//     	content: "";
+//     	display: table;
+//     	clear: both;
+// 	}
+// }
+
+// @mixin svg($width, $height, $fill) {
+// 	width: $width;
+// 	height: $height;
+// 	fill: $fill;
+// }
+
+// @mixin font($size,$family) {
+//     font-size: #{$size}px;
+//     font-family: #{$family}, "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+// }
+
+// @mixin lines($bg-color, $width: 22px) {
+// 	&:after,
+// 	&:before {
+//     	content: "";
+//     	position: absolute;
+// 		top: .5em;
+// 		right: 0;
+//     	width: $width;
+// 		height: 5px;
+//     	background-color: $bg-color;
+//     	opacity: 0.8;
+// 	}
+
+// 	&:before {
+// 		left: 0px;
+// 	}
+// }
+
+// %block-center {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+// }
+
+// %svg-bg {
+// 	@extend %block-center;
+// 	z-index: 0;
+// 	width: 100%;
+// 	height: auto;
+// 	fill: #000;
+// 	opacity: 0.06;
+
+// 	@include tablet {
+// 		width: 75%;
+// 	}
+// }
+
+// @mixin i-b($align) {
+// 	display: inline-block;
+// 	vertical-align: $align;
+// }
