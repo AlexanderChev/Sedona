@@ -1,2 +1,5 @@
-@import "global/**/*.scss";
-@import "blocks/**/*.scss";
+@import "common/global/variables";
+@import "common/global/mixins";
+@import "common/global/base";
+@import "common/global/fonts";
+@import "common/**/*.scss";

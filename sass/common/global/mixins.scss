@@ -1,0 +1,61 @@
+@mixin mobile-only {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+%clearfix {
+	&:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+	}
+}
+
+@mixin svg($width, $height, $fill:inherit) {
+	width: $width;
+	height: $height;
+	fill: $fill;
+}
+
+// @mixin lines($bg-color, $width: 22px) {
+// 	&:after,
+// 	&:before {
+//     	content: "";
+//     	position: absolute;
+// 		top: .5em;
+// 		right: 0;
+//     	width: $width;
+// 		height: 5px;
+//     	background-color: $bg-color;
+//     	opacity: 0.8;
+// 	}
+
+// 	&:before {
+// 		left: 0px;
+// 	}
+// }
+
+%block-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin i-b($align) {
+	display: inline-block;
+	vertical-align: $align;
+}

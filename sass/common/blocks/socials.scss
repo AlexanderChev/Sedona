@@ -1,0 +1,35 @@
+.socials {
+	display: flex;
+	justify-content: space-between;
+	margin-left: -5px;
+}
+
+.socials__link {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	font-size: 0;
+	margin-left: 5px;
+	background-color: $blue;
+	transition: 0.4s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.socials__icon {
+	@extend %block-center;
+}
+
+.socials__link--twitter .socials__icon {
+	@include svg(18px, 15px, #fff);
+}
+
+.socials__link--youtube .socials__icon {
+	@include svg(20px, 15px, #fff);
+}
+
+.socials__link--facebook .socials__icon {
+	@include svg(9px, 19px, #fff);
+}

@@ -1,0 +1,24 @@
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px 0;
+	background-color: #fff;
+}
+
+.page-footer__text {
+	font-size: 21px;
+	line-height: 1.2;
+	font-weight: 700;
+	text-align: center;
+}
+
+.page-footer__copyright a {
+	@include i-b(middle);
+	margin-left: 5px;
+	font-size: 0;
+}
+
+.page-footer__copyright-icon {
+	@include svg(26px, 34px, #000);
+}

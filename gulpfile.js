@@ -9,11 +9,11 @@ let server = require('browser-sync');
 let svgmin = require('gulp-svgmin');
 let cheerio = require('gulp-cheerio');
 let replace = require('gulp-replace');
-let svgSprite = require('gulp-svg-sprite');
+let svgSprite = require('gulp-svg-sprites');
 let sassGlob = require('gulp-sass-glob');
 let cssUnit = require('gulp-css-unit');
 let concatCss = require('gulp-concat-css');
-let minify = require("gulp-csso");
+let minify = require('gulp-csso');
 
 gulp.task('css:foundation', function() {
   return gulp.src('./node_modules/normalize.css/normalize.css')
@@ -39,19 +39,23 @@ gulp.task('sprite:svg', function() {
       }))
       .pipe(replace('&gt;', '>'))
       .pipe(svgSprite({
-        mode: {
-          symbol: {
-            sprite: '../sprite.svg'
-          }
-        }
+        		mode: "symbols",
+				preview: false,
+				selector: "%f",
+				svg: {
+					symbols: 'sprite.svg'
+				}
+      }))
+	  .pipe(cheerio(function ($) {
+      	$('svg').attr('style',  'display:none');
       }))
       .pipe(gulp.dest('./img/'));
 });
 
 gulp.task('style', function() {
   gulp.src('sass/style.scss')
+    .pipe(sassGlob())
     .pipe(plumber())
-	.pipe(sassGlob())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({browsers: [
@@ -70,7 +74,7 @@ gulp.task('style', function() {
 gulp.task('serve', ['style'], function() {
   server.init({
     server: '.',
-    notify: false,
+    notify: true,
     open: true,
     ui: false
   });
