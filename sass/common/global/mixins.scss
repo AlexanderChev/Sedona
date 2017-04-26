@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin tablet-only {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media (min-width: 768px) {
 		@content;
@@ -29,24 +35,6 @@
 	height: $height;
 	fill: $fill;
 }
-
-// @mixin lines($bg-color, $width: 22px) {
-// 	&:after,
-// 	&:before {
-//     	content: "";
-//     	position: absolute;
-// 		top: .5em;
-// 		right: 0;
-//     	width: $width;
-// 		height: 5px;
-//     	background-color: $bg-color;
-//     	opacity: 0.8;
-// 	}
-
-// 	&:before {
-// 		left: 0px;
-// 	}
-// }
 
 %block-center {
 	position: absolute;

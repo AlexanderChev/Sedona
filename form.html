@@ -58,71 +58,80 @@
 			</div>
 			<form action="#" method="POST" class="form">
 				<div class="form__group form__group--personal">
-					<h3 class="form__group-title">Представтесь, пожалуйста:</h3>
-					<p class="form__input-wrap">
-						<label for="name" class="form__label">Имя:</label>
-						<input type="text" name="useName" class="form__input-text" id="name" placeholder="Петр">
-					</p>
-					<p class="form__input-wrap">
-						<label for="last-name" class="form__label">Фамилия:</label>
-						<input type="text" name="userLastName" class="form__input-text" id="last-name" placeholder="Петров">
-					</p>
-					<p class="form__input-wrap">
-						<label for="middle-name" class="form__label">Отчество:</label>
-						<input type="text" name="userMiddleName" class="form__input-text" id="middle-name" placeholder="Петрович">
-					</p>
+					<h3 class="form__group-title"><div>Представтесь<span>, пожалуйста</span>:</div></h3>
+					<div class="form__inner-personal">
+						<p class="form__input-wrap">
+							<label for="name" class="form__label">Имя:</label>
+							<input type="text" name="useName" class="form__input-text" id="name" placeholder="Петр">
+						</p>
+						<p class="form__input-wrap">
+							<label for="last-name" class="form__label">Фамилия:</label>
+							<input type="text" name="userLastName" class="form__input-text" id="last-name" placeholder="Петров">
+						</p>
+						<p class="form__input-wrap">
+							<label for="middle-name" class="form__label">Отчество:</label>
+							<input type="text" name="userMiddleName" class="form__input-text" id="middle-name" placeholder="Петрович">
+						</p>
+					</div>
 				</div>
 				<div class="form__group form__group--impression">
-					<h3 class="form__group-title">Ваше Общее впечатление:</h3>
-					<p class="form__input-wrap">
-						<label for="positive" class="form__label">Скорее положительное</label>
-						<input type="radio" name="positive" class="form__input-radio" id="positive" checked>
-					</p>
-					<p class="form__input-wrap">
-						<label for="negative" class="form__label">Скорее отрицательное</label>
-						<input type="radio" name="negative" class="form__input-radio" id="negative">
-					</p>
-					<p class="form__input-wrap">
-						<label for="unknown" class="form__label">Затрудняюсь ответить</label>
-						<input type="radio" name="unknown" class="form__input-radio" id="unknown">
-					</p>
+					<h3 class="form__group-title"><div>Ваше Общее впечатление:</div></h3>
+					<div class="form__inner-impression">
+						<p class="form__input-wrap">
+							<input type="radio" name="radio" class="form__input-radio" id="input-radio-1" checked>
+							<label for="input-radio-1" class="form__label">Скорее положительное</label>
+						</p>
+						<p class="form__input-wrap">
+							<input type="radio" name="radio" class="form__input-radio" id="input-radio-2">
+							<label for="input-radio-2" class="form__label">Скорее отрицательное</label>
+						</p>
+						<p class="form__input-wrap">
+							<input type="radio" name="radio" class="form__input-radio" id="input-radio-3">
+							<label for="input-radio-3" class="form__label">Затрудняюсь ответить</label>
+						</p>
+					</div>
 				</div>
 				<div class="form__group form__group--contacts">
-					<h3 class="form__group-title">Контактная информация:</h3>
-					<p class="form__input-wrap">
-						<label for="phone" class="form__label">Телефон:</label>
-						<input type="tel" name="tel" class="form__input-text" id="phone" placeholder="Введите номер">
-					</p>
-					<p class="form__input-wrap">
-						<label class="mail">Электронная почта:</label>
-						<input type="email" name="email" class="form__input-text" id="mail" placeholder="Введите e-mail">
-					</p>
+					<h3 class="form__group-title"><div>Контактная информация:</div></h3>
+					<div class="form__inner-contacts">
+						<p class="form__input-wrap">
+							<label for="phone" class="form__label"><span>Контактный</span> телефон:</label>
+							<input type="tel" name="tel" class="form__input-text" id="phone" placeholder="Введите номер">
+							<div class="form__error">Ошибка, перепроверьте номер</div>
+						</p>
+						<p class="form__input-wrap">
+							<label for="email" class="form__label">Электронная почта:</label>
+							<input type="email" name="email" class="form__input-text" id="email" placeholder="Введите e-mail">
+						</p>
+					</div>
 				</div>
-				<div class="form__group">
-					<h3 class="form__group-title">Посещенные достопримечательности:</h3>
-					<p class="form__input-wrap">
-						<label for="devil-bridge" class="form__label">Мост Дьявола</label>
-						<input type="checkbox" name="devilBridge" class="form__input-checkbox" id="devil-bridge">
-					</p>
-					<p class="form__input-wrap">
-						<label for="mount-bell" class="form__label">Гора-Колокол</label>
-						<input type="checkbox" name="mountBell" class="form__input-checkbox" id="mount-bell">
-					</p>
-					<p class="form__input-wrap">
-						<label for="slide-park" class="form__label">Слайд-парк</label>
-						<input type="checkbox" name="slidePark" class="form__input-checkbox" id="slide-park">
-					</p>
-					<p class="form__input-wrap">
-						<label for="red-rocks" class="form__label">Красные скалы</label>
-						<input type="checkbox" name="redRocks" class="form__input-checkbox" id="red-rocks">
-					</p>
+				<div class="form__group form__group--places">
+					<h3 class="form__group-title"><div>Посещенные достопримечательности:</div></h3>
+					<div class="form__inner-places">
+						<p class="form__input-wrap">
+							<input type="checkbox" name="devilBridge" class="form__input-checkbox" id="devil-bridge" checked>
+							<label for="devil-bridge" class="form__label">Мост Дьявола</label>
+						</p>
+						<p class="form__input-wrap">
+							<input type="checkbox" name="mountBell" class="form__input-checkbox" id="mount-bell">
+							<label for="mount-bell" class="form__label">Гора-Колокол</label>
+						</p>
+						<p class="form__input-wrap">
+							<input type="checkbox" name="slidePark" class="form__input-checkbox" id="slide-park">
+							<label for="slide-park" class="form__label">Слайд-парк</label>
+						</p>
+						<p class="form__input-wrap">
+							<input type="checkbox" name="redRocks" class="form__input-checkbox" id="red-rocks">
+							<label for="red-rocks" class="form__label">Красные скалы</label>
+						</p>
+					</div>
 				</div>
-				<div class="form__group form__group__message">
-					<h3 class="form__group-title">Опишите свои эмоции:</h3>
-					<textarea class="form__input-text" rows="10" name="message" id="message" placeholder="Опишите подробно все свои восторги">
-					</textarea>
+				<div class="form__group form__group--message">
+					<h3 class="form__group-title"><div>Опишите свои эмоции:</div></h3>
+					<textarea class="form__input-text" name="message" id="message" placeholder="Опишите подробно все свои восторги"></textarea>
 				</div>
 				<input type="submit" class="form__submit" value="Отправить отзыв">
+				<p class="form__note">* — обязательные поля</p>
 			</form>
 
 		</main>
