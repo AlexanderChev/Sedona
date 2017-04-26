@@ -1,15 +1,87 @@
+.reasons {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include mobile-only {
+		&:after {
+			content: "";
+			position: absolute;
+			top: -57px;
+			left: 0;
+			right: 0;
+			height: 57px;
+			background-image: url("../img/icons/bg-intro-triangle-tablet-blue.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
+
+.reasons__block {
+	width: 100%;
+}
+
+.reasons__block--nopicture {
+	position: relative;
+	padding: 10px 20px 20px;
+	color: $color-dark;
+	text-align: center;
+	background-color: $gray;
+
+	@include mobile-only {
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 87.5%;
+			height: 1px;
+			background-color: #d6d6d6;
+			transform: translateX(-50%);
+		}
+	}
+
+	@include tablet {
+		width: 33%;
+		flex-grow: 1;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+@include tablet {
+	.reasons__wrap {
+		display: flex;
+		height: 256px;
+	}
+}
+
 .reasons__content{
 	padding: 45px 6%;
 	font-size: 14px;
 	color: $color-light;
 	text-align: center;
 	background-color: $blue;
+
+	@include tablet {
+		width: 33%;
+
+		&--right {
+			order: 1;
+		}
+	}
 }
 
 .reasons__name {
 	margin-bottom: 20px;
 	font-size: 21px;
 	font-weight: 700;
+
+	@include tablet {
+		padding: 0 20%;
+	}
 }
 
 .reasons__number {
@@ -22,6 +94,16 @@
 
 .reasons__picture {
 	text-align: center;
+	overflow: hidden;
+
+	@include tablet {
+		width: 67%;
+
+		& img {
+			display: block;
+			width: 100%;
+		}
+	}
 }
 
 .reasons__list {
@@ -39,6 +121,8 @@
 
 	@include tablet {
 		width: 33.3%;
+		padding: 110px 50px 60px;
+		text-align: center;
 	}
 }
 
@@ -47,6 +131,10 @@
 	line-height: 1.4;
 	font-weight: 700;
 	color: $color-dark;
+
+	@include tablet {
+		font-size: 21px;
+	}
 }
 
 .reasons__icon {
@@ -54,22 +142,12 @@
 	top: 10px;
 	left: 20px;
 	@include svg(35px, 35px, $blue);
-}
 
-.reasons__block--nopicture {
-	position: relative;
-	padding: 10px 20px 20px;
-	color: $color-dark;
-	text-align: center;
-
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
+	@include tablet {
+		top: 40px;
 		left: 50%;
-		width: 87.5%;
-		height: 1px;
-		background-color: #d6d6d6;
+		width: 75px;
+		height: 75px;
 		transform: translateX(-50%);
 	}
 }

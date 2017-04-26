@@ -19,22 +19,35 @@
     <![endif]-->
 	<div class="wrapper">
 		<header class="page-header">
-			<nav class="main-nav">
-				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
-					<li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фото и видео</a></li>
-				</ul>
-				<ul class="main-nav__list">
-					<li class="main-nav__item"><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
-					<li class="main-nav__item"><a href="https://htmlacademy.ru" class="main-nav__link">Html Academy</a></li>
-				</ul>
-			</nav>
-			<a href="index.html" class="page-header__logo">Седона</a>
-			<a href="#" class="page-header__toggle-close">Закрыть</a>
-			<a href="#" class="page-header__toggle-open">Меню</a>
+			<div class="page-header__top">
+				<nav class="main-nav">
+					<ul class="main-nav__list main-nav__list--left">
+						<li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+						<li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фото и видео</a></li>
+					</ul>
+					<ul class="main-nav__list main-nav__list--right">
+						<li class="main-nav__item"><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
+						<li class="main-nav__item"><a href="https://htmlacademy.ru" class="main-nav__link">Html Academy</a></li>
+					</ul>
+				</nav>
+				<a href="index.html" class="page-header__logo">Седона
+					<picture>
+						<source media="(min-width: 1200px)" srcset="img/icons/logo-sedona-desktop.svg">
+						<img src="img/icons/logo-sedona-mobile.svg" alt="Седона">
+					</picture>
+				</a>
+				<a href="#" class="page-header__toggle-menu">Меню
+					<svg class="page-header__icon-menu">
+						<use xlink:href="#icon-menu"></use>
+					</svg>
+					<svg class="page-header__icon-cross">
+						<use xlink:href="#icon-cross"></use>
+					</svg>
+				</a>
+			</div>
 			<div class="page-header__intro">
-				<h1 class="visible-hidden">Добро пожаловать в Седону</h1>
-				<svg></svg>
+				<h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+				<img class="page-header__title-img" src="img/icons/text-sedona.svg" alt="Добро пожаловать в Седону">
 			</div>
 		</header> <!-- .page-header -->
 
@@ -100,11 +113,29 @@
 		<footer class="page-footer">
 			<p class="page-footer__text">#visitsedona</p>
 			<p class="socials">
-				<a href="#" class="socials">Twitter</a>
-				<a href="#" class="socials">Facebook</a>
-				<a href="#" class="socials">Youtube</a>
+				<a href="#" class="socials__link socials__link--twitter">Twitter
+					<svg class="socials__icon">
+						<use xlink:href="#icon-twitter"></use>
+					</svg>
+				</a>
+				<a href="#" class="socials__link socials__link--facebook">Facebook
+					<svg class="socials__icon">
+						<use xlink:href="#icon-facebook"></use>
+					</svg>
+				</a>
+				<a href="#" class="socials__link socials__link--youtube">Youtube
+					<svg class="socials__icon">
+						<use xlink:href="#icon-youtube"></use>
+					</svg>
+				</a>
 			</p>
-			<p class="page-footer__copyright">Разработано <a href="#">Html Academy</a></p>
+			<p class="page-footer__copyright">Разработано
+				<a href="#">Html Academy
+					<svg class="page-footer__copyright-icon">
+						<use xlink:href="#icon-academy"></use>
+					</svg>
+				</a>
+			</p>
 		</footer>  <!-- </footer> -->
 	</div>
 

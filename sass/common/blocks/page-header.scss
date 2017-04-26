@@ -2,6 +2,10 @@
 	position: relative;
 	padding-bottom: 56px;
 	background-color: #fff;
+
+	@include tablet {
+		padding: 0;
+	}
 }
 
 .page-header__logo,
@@ -14,6 +18,10 @@
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 10;
+
+	@include tablet {
+		top: 0;
+	}
 }
 
 .page-header__toggle-menu {
@@ -29,6 +37,10 @@
 	&.active .page-header__icon-cross {
 		display: block;
 		fill: #fff;
+	}
+
+	@include tablet {
+		display: none;
 	}
 }
 

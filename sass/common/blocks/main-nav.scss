@@ -5,6 +5,22 @@
 	&.active {
 		display: block;
 	}
+
+	@include tablet {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@include tablet {
+	.main-nav__list {
+		display: flex;
+		width: 40%;
+	}
+
+	.main-nav__item {
+		width: 50%;
+	}
 }
 
 .main-nav__link {
@@ -22,5 +38,14 @@
 	.main-nav__list:last-of-type .main-nav__item:last-of-type & {
 		border: none;
 		box-shadow: inset 0 -3px 10px 0 rgba(#000, 0.2);
+	}
+
+	@include tablet {
+		font-size: 14px;
+		line-height: 3;
+		color: $color-dark;
+		background-color: #fff;
+		border: none;
+		box-shadow: none !important;
 	}
 }

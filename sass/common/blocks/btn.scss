@@ -10,4 +10,8 @@
 	color: $color-light;
 	text-align: center;
 	background-color: $blue;
+
+	@include tablet {
+		max-width: 460px;
+	}
 }

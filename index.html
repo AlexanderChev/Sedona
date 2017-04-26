@@ -21,11 +21,11 @@
 		<header class="page-header">
 			<div class="page-header__top">
 				<nav class="main-nav">
-					<ul class="main-nav__list">
+					<ul class="main-nav__list main-nav__list--left">
 						<li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
 						<li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фото и видео</a></li>
 					</ul>
-					<ul class="main-nav__list">
+					<ul class="main-nav__list main-nav__list--right">
 						<li class="main-nav__item"><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
 						<li class="main-nav__item"><a href="https://htmlacademy.ru" class="main-nav__link">Html Academy</a></li>
 					</ul>
@@ -69,7 +69,7 @@
 							<picture>
 								<source media="(min-width: 1200px)" srcset="img/background/photo-city-desktop@1x.jpg 1x, img/background/photo-city-desktop@2x.jpg 2x">
 								<source media="(min-width: 768px)" srcset="img/background/photo-city-tablet@1x.jpg 1x">
-								<img src="img/background/photo-city-mobile@1x.jpg" width="320" height="260" alt="город Седона">
+								<img src="img/background/photo-city-mobile@1x.jpg" alt="город Седона">
 							</picture>
 						</div>
 					</div>
@@ -85,30 +85,32 @@
 							<h3 class="reasons__item-title">Еда</h3>
 							<p class="reasons__item-text">Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
 							<svg class="reasons__icon">
-								<use xlink:href="#icon-gift"></use>
+								<use xlink:href="#icon-burger"></use>
 							</svg>
 						</li>
 						<li class="reasons__item">
 							<h3 class="reasons__item-title">Сувениры</h3>
 							<p class="reasons__item-text">Не только китайского, но и местного производства!</p>
 							<svg class="reasons__icon">
-								<use xlink:href="#icon-burger"></use>
+								<use xlink:href="#icon-gift"></use>
 							</svg>
 						</li>
 					</ul>
 				</li>
 				<li class="reasons__block">
-					<div class="reasons__content">
-						<h3 class="reasons__name">Там есть мост дьявола</h3>
-						<span class="reasons__number">— №2 —</span>
-						<p class="reasons__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-					</div>
-					<div class="reasons__picture">
-						<picture>
-							<source media="(min-width: 1200px)" srcset="img/background/photo-bridge-desktop@1x.jpg 1x, img/background/photo-bridge-desktop@2x.jpg 2x">
-							<source media="(min-width: 768px)" srcset="img/background/photo-bridge-tablet@1x.jpg 1x">
-							<img src="img/background/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="мост дьявола">
-						</picture>
+					<div class="reasons__wrap">
+						<div class="reasons__content reasons__content--right">
+							<h3 class="reasons__name">Там есть мост дьявола</h3>
+							<span class="reasons__number">— №2 —</span>
+							<p class="reasons__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+						</div>
+						<div class="reasons__picture">
+							<picture>
+								<source media="(min-width: 1200px)" srcset="img/background/photo-bridge-desktop@1x.jpg 1x, img/background/photo-bridge-desktop@2x.jpg 2x">
+								<source media="(min-width: 768px)" srcset="img/background/photo-bridge-tablet@1x.jpg 1x">
+								<img src="img/background/photo-bridge-mobile@1x.jpg" alt="мост дьявола">
+							</picture>
+						</div>
 					</div>
 				</li>
 				<li class="reasons__block reasons__block--nopicture">

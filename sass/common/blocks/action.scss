@@ -1,5 +1,9 @@
 .action {
 	padding-bottom: 50px;
+
+	@include tablet {
+		padding-bottom: 70px;
+	}
 }
 
 div.action__title {
