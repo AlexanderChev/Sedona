@@ -14,7 +14,11 @@
 	transition: 0.4s;
 
 	&:hover {
-		opacity: 0.5;
+		background-color: #669ec0;
+	}
+
+	&:active .socials__icon {
+		opacity: 0.3;
 	}
 }
 

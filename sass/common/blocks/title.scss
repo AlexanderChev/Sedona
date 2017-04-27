@@ -14,6 +14,10 @@
 		line-height: 1.4;
 		font-weight: 700;
 		margin-bottom: 35px;
+
+		@include tablet {
+			font-size: 30px;
+		}
 	}
 
 	& p {

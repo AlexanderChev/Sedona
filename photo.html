@@ -23,7 +23,7 @@
 				<nav class="main-nav">
 					<ul class="main-nav__list main-nav__list--left">
 						<li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
-						<li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фото и видео</a></li>
+						<li class="main-nav__item"><a href="photo.html" class="main-nav__link active">Фото и видео</a></li>
 					</ul>
 					<ul class="main-nav__list main-nav__list--right">
 						<li class="main-nav__item"><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
@@ -58,35 +58,75 @@
 			</div>
 			<section class="gallery">
 				<figure class="gallery__item gallery__item--full">
-					<img src="#" alt="" class="gallery__photo">
+					<a class="gallery__link" href="img/background/photo-1-desktop@2x.jpg">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/background/photo-1-desktop@1x.jpg 1x, img/background/photo-1-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/background/photo-1-tablet@1x.jpg 1x">
+							<img src="img/background/photo-1-mobile@1x.jpg" alt="Неродные просторы">
+						</picture>
+					</a>
 					<figcaption class="gallery__photo-content">
 						<h4 class="gallery__photo-title">Неродные просторы</h4>
 						<p class="gallery__photo-author">Автор фото: <span>Борис</span></p>
-						<div class="gallery__photo-likes">Лайков <span class="gallery__count-likes">143</span></div>
+						<div class="gallery__photo-likes">
+							<svg class="gallery__icon-likes">
+								<use xlink:href="#icon-like"></use>
+							</svg>
+							Лайков <span class="gallery__count-likes">143</span></div>
 					</figcaption>
 				</figure>
 				<figure class="gallery__item">
-					<img src="#" alt="" class="gallery__photo">
+					<a class="gallery__link" href="img/background/photo-2-desktop@2x.jpg">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/background/photo-2-desktop@1x.jpg 1x, img/background/photo-2-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/background/photo-2-tablet@1x.jpg 1x">
+							<img src="img/background/photo-2-mobile@1x.jpg" alt="Местная растительность">
+						</picture>
+					</a>
 					<figcaption class="gallery__photo-content">
 						<h4 class="gallery__photo-title">Неродные просторы</h4>
 						<p class="gallery__photo-author">Автор фото: <span>Борис</span></p>
-						<div class="gallery__photo-likes">Лайков <span class="gallery__count-likes">143</span></div>
+						<div class="gallery__photo-likes">
+							<svg class="gallery__icon-likes">
+								<use xlink:href="#icon-like"></use>
+							</svg>
+							Лайков <span class="gallery__count-likes">143</span></div>
 					</figcaption>
 				</figure>
 				<figure class="gallery__item">
-					<img src="#" alt="" class="gallery__photo">
+					<a class="gallery__link" href="img/background/photo-3-desktop@2x.jpg">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/background/photo-3-desktop@1x.jpg 1x, img/background/photo-3-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/background/photo-3-tablet@1x.jpg 1x">
+							<img src="img/background/photo-3-mobile@1x.jpg" alt="Дорога на север">
+						</picture>
+					</a>
 					<figcaption class="gallery__photo-content">
 						<h4 class="gallery__photo-title">Неродные просторы</h4>
 						<p class="gallery__photo-author">Автор фото: <span>Борис</span></p>
-						<div class="gallery__photo-likes">Лайков <span class="gallery__count-likes">143</span></div>
+						<div class="gallery__photo-likes">
+							<svg class="gallery__icon-likes">
+								<use xlink:href="#icon-like"></use>
+							</svg>
+							Лайков <span class="gallery__count-likes">143</span></div>
 					</figcaption>
 				</figure>
 				<figure class="gallery__item">
-					<img src="#" alt="" class="gallery__photo">
+					<a class="gallery__link" href="img/background/photo-4-desktop@2x.jpg">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/background/photo-4-desktop@1x.jpg 1x, img/background/photo-4-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/background/photo-4-tablet@1x.jpg 1x">
+							<img src="img/background/photo-4-mobile@1x.jpg" alt="Мост дьявола	">
+						</picture>
+					</a>
 					<figcaption class="gallery__photo-content">
 						<h4 class="gallery__photo-title">Неродные просторы</h4>
 						<p class="gallery__photo-author">Автор фото: <span>Борис</span></p>
-						<div class="gallery__photo-likes">Лайков <span class="gallery__count-likes">143</span></div>
+						<div class="gallery__photo-likes">
+							<svg class="gallery__icon-likes">
+								<use xlink:href="#icon-like"></use>
+							</svg>
+							Лайков <span class="gallery__count-likes">143</span></div>
 					</figcaption>
 				</figure>
 			</section>
@@ -95,17 +135,28 @@
 				<p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
 			</div>
 			<section class="video">
-				<div class="video__display">
-					<img src="#" alt="">
-					<div class="video__play-controls">
-						<div class="video__btn-back"></div>
-						<div class="video__progress-bar">
-							<div class="video__progress-timeline"></div>
-							<div class="video__progress-toggle"></div>
+				<video src="#" class="video__screen"></video>
+				<div class="video__play-controls">
+					<button class="video__btn video__btn-replay" type="button" title="Повтор">Повтор
+						<svg class="video__icon video__icon-replay">
+							<use xlink:href="#icon-replay"></use>
+						</svg>
+					</button>
+					<div class="video__volume-bar">
+						<div class="video__volume-scale">
+							<div class="video__volume-slider">Громкость</div>
 						</div>
-						<div class="video__btn-subtitles"></div>
-						<div class="video__btn-fullsceen"></div>
 					</div>
+					<button class="video__btn video__btn-subtitles" type="button" title="Субтитры">Субтитры
+						<svg class="video__icon video__icon-subtitles">
+							<use xlink:href="#icon-subtitles"></use>
+						</svg>
+					</button>
+					<button class="video__btn video__btn-fullscreen" type="button" title="Во всеь экран">Во всеь экран
+						<svg class="video__icon video__icon-fullscreen">
+							<use xlink:href="#icon-fullscreen"></use>
+						</svg>
+					</button>
 				</div>
 			</section>
 		</main>

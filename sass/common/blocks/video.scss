@@ -1,0 +1,156 @@
+.video {
+	position: relative;
+	width: 100%;
+	max-width: 320px;
+	margin: 0 auto;
+
+	@include tablet {
+		max-width: 648px;
+	}
+
+	@include desktop {
+		max-width: 800px;
+	}
+}
+
+.video__screen {
+	display: block;
+	width: 100%;
+	height: 200px;
+	background-color: #b39998;
+	background-image: url("../img/background/video-mobile@1x.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+		background-image: url("../img/background/video-mobile@2x.jpg");
+		background-size: 320px auto;
+	}
+
+	@include tablet {
+		height: 500px;
+		background-image: url("../img/background/video-tablet@1x.jpg");
+	}
+
+	@include desktop {
+		background-image: url("../img/background/video-desktop@1x.jpg");
+	}
+}
+
+.video__play-controls {
+	position: relative;
+	width: 280px;
+	height: 66px;
+	margin: 0 auto;
+	background-color: $bg-input;
+
+	@include tablet {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 92px;
+		background-color: rgba(#000, 0.6);
+	}
+}
+
+.video__volume-bar {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	height: 45px;
+	padding: 0 23px;
+	background-color: rgba(#000, 0.6);
+	z-index: 10;
+
+	@include tablet {
+		bottom: 0;
+		height: 100%;
+		background-color: transparent;
+	}
+}
+
+.video__volume-scale {
+	@extend %block-center;
+	width: 235px;
+	height: 3px;
+	background-color: rgba(#fff, 0.2);
+	cursor: pointer;
+
+	@include tablet {
+		width: 389px;
+	}
+
+	@include desktop {
+		width: 540px;
+	}
+}
+
+.video__volume-slider {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+	background-color: #fff;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.video__btn {
+	position: absolute;
+	top: 50%;
+	z-index: 100;
+	padding: 0;
+	font-size: 0;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	transform: translateY(-50%);
+	cursor: pointer;
+
+	&:hover .video__icon {
+		fill: #333333;
+	}
+
+	&:active .video__icon {
+		opacity: 0.3;
+	}
+}
+
+.video__btn-replay {
+	left: 23px;
+}
+
+.video__btn-subtitles {
+	right: 74px;
+}
+
+.video__btn-fullscreen {
+	right: 23px;
+}
+
+.video__icon-replay {
+	@include svg(16px, 20px);
+}
+
+.video__icon-subtitles {
+	@include svg(32px, 20px);
+}
+
+.video__icon-fullscreen {
+	@include svg(20px, 20px);
+}
+
+.video__icon  {
+	fill: $bg-btn-video;
+	transition: 0.4s;
+
+	@include tablet {
+		fill: #fff;
+	}
+}

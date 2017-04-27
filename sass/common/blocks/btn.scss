@@ -10,8 +10,21 @@
 	color: $color-light;
 	text-align: center;
 	background-color: $blue;
+	transition: 0.4s;
 
 	@include tablet {
 		max-width: 460px;
+
+		&:hover {
+			background-color: #669ec0;
+		}
+
+		&:active {
+			color: rgba(#fff, 0.3);
+		}
+
+		&:disabled {
+			background-color: $bg-input;
+		}
 	}
 }
