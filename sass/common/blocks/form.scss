@@ -325,3 +325,11 @@ textarea.form__input-text {
 		margin-left: 0;
 	}
 }
+
+.form__note {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}
