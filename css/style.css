@@ -456,6 +456,8 @@ textarea.form__input-text {
   display: none; }
   .main-nav.active {
     display: block; }
+  .main-nav.no-js {
+    display: block; }
   @media (min-width: 48rem) {
     .main-nav {
       display: flex;
